@@ -1,0 +1,374 @@
+* {
+	box-sizing: border-box;
+	
+}
+
+
+
+
+
+
+@font-face {
+	font-family: oldalcim;
+	src: url(betutipusok/alap.ttf);
+}
+
+@font-face {
+	font-family: tartalom;
+	src: url(betutipusok/alap.ttf);
+}
+
+html {
+	font-family: tartalom;
+	padding: 0px;
+	margin: 0px;
+	color: rgb(255, 255, 255);
+	font-size: 1.2em;
+}
+
+body {
+	background-image: url(kepek/probahatter.jpg);
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+	background-color: rgba(22, 47, 79, 0.9);
+	background-image: linear-gradient(to bottom right, rgb(156, 156, 255), rgb(255, 175, 255));
+	opacity: 0.9;
+	margin-top: 0;
+	font-size: 6vw;
+	font-family: oldalcim;
+	
+}
+
+footer {
+	background-color: rgba(65, 65, 65, 0.6);
+	margin-top: 2%;
+	font-size: 0.8em;
+	text-align: center;
+	color: rgb(200, 200, 200);
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+}
+
+
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav ul li {
+	padding: 0px;
+}
+
+nav li a {
+	display: block;
+	color: rgb(255, 255, 255);
+	background-color: rgba(156, 156, 255, 0.8);
+	text-align: center;
+	text-decoration: none;
+	border-style: solid;
+	border-color: rgb(255, 255, 255);
+	padding: 5%;
+	transition: 0.5s ease;
+}
+
+nav li a#active {
+	background-color: rgb(255, 205, 240, 0.9);
+}
+
+nav li a:hover, nav li a#active:hover {
+	background-color: rgb(245, 185, 240);
+	color: rgba(22, 47, 79, 0.6);
+	border-color: rgba(22, 47, 79, 0.6);
+}
+
+
+
+
+
+div#content {
+	display: flex;
+	flex-direction: column;
+}
+
+article {
+	text-align: justify;
+	background-color: rgba(255, 175, 255, 0.95);
+	padding: 1% 2% 1% 2%;
+	margin: 1%;
+	/*border-radius: 10px;*/
+}
+
+figure {
+	height: fit-content;
+	padding: 1%;
+	background-color: rgba(255, 175, 255, 0.95);
+	text-align: center;
+	margin: 1%;
+}
+
+figcaption {
+	padding: 2%;
+}
+
+img {
+	max-width: 100%;
+}
+
+aside {
+	height: fit-content;
+	text-align: center;
+	background-color: rgba(237, 116, 253, 0.932);
+	padding: 1% 2% 1% 2%;
+	margin: 1%;
+}
+
+.slider {
+	width: 80%;
+	max-width: 800px;
+  }
+  .slider img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+ /*====SLICK GALLERY====*/
+  
+  #gallery {
+	position: relative;
+	/* display: flex; /* Flexbox használata */
+	/* justify-content: center; /* Középre igazítás vízszintesen */
+	/* align-items: center; /* Középre igazítás függőlegesen */
+	/* text-align: center; /* Szövegek középre igazítása */
+	/* height: fit-content;*/
+	padding: 15px;
+	background-color: rgba(144, 153, 162, 0.6);
+	margin: 15px;
+}
+
+/*#gallery h2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    margin: 0;
+    color: white;
+}*/
+
+/* Slick elemek stílusa */
+.multiple-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.multiple-items .slick-slide {
+    padding: 0 10px;
+}
+
+.multiple-items img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.multiple-items img:hover {
+    transform: scale(1.1);
+}
+
+/*====MODAL====*/
+.modal {
+    display: none; /* Alapértelmezés szerint rejtett */
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Sötét háttér */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal tartalom */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal kép */
+.modal-content img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Bezáró ikon */
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+
+div#gallery {
+	height: fit-content;
+	padding: 15px;
+	background-color: rgba(144, 153, 162, 0.6);
+	margin: 15px;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	flex-basis: 75%;
+	align-items: center;
+	gap: 0.8em;
+}
+
+div#gallery img {
+	transition: 2s;
+}
+
+div#gallery img:hover {
+	transform: scale(1.1);
+}
+
+
+
+
+section {
+	background-color: rgba(144, 153, 162, 0.6);
+	padding: 1% 2% 1% 2%;
+	margin: 1%;
+	text-align: right;
+	height: fit-content;
+}
+
+/*====OSZTALYOK====*/
+
+ul.list {
+	list-style-image: url('kepek/kor.png');
+}
+
+span {
+	background-color: rgba(65, 65, 65, 0.2);
+	padding: 2%;
+}
+
+/*====ADATBEVITEL====*/
+
+input.textbox {
+	width: 100%;
+	padding: 1%;
+	margin: 1%;
+	border: rgb(255, 255, 255) solid 1px;
+	border-radius: 4px;
+}
+
+input.button {
+	background-color: rgba(22, 47, 79, 0.6);
+	font-family: tartalom;
+	font-size: 0.8em;
+	padding: 12px 20px;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	border-style: solid;
+	border-color: rgb(255, 255, 255);
+}
+
+input.button:hover {
+	background-color: rgb(255, 255, 255);
+	border-color: rgba(22, 47, 79, 0.6);
+	color: rgba(22, 47, 79, 0.6);
+}
+
+input.button:active {
+	background-color: rgba(144, 153, 162, 0.6);
+	border-color: rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
+
+
+
+@media only screen and (min-width: 600px) {
+	/* tablet */
+	div#content {
+		flex-direction: row;
+	}
+	nav ul {
+		flex-direction: row;
+	}
+	nav ul li {
+		flex-basis: 33.33%;
+	}
+	div#content2 {
+		display: flex;
+		flex-direction: column;
+	}
+	#bottom {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	section {
+		flex-basis: 46%;
+	}
+	#bottom figure {
+		flex-basis: 46%;
+	}
+	#bottom aside {
+		flex-basis: 100%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	/* számítógép */
+	article {
+		flex-basis: 66.66%;
+	}
+	figure {
+		flex-basis: 33.33%;
+	}
+	aside {
+		flex-basis: 25%;
+	}
+	section {
+		flex-basis: 23%;
+	}
+	#bottom figure {
+		flex-basis: 48%;
+	}
+	#bottom aside {
+		flex-basis: 23%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+    .modal-content img {
+        max-width: 90%;
+        max-height: 80%;
+    }
+}

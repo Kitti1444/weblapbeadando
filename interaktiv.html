@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hallgató">
+    <meta name="description" content="Mikrookonomia">
+    <title>Mikroökonómia</title>
+    <link href="kepek/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="scripts/interaktiv-script.js" defer></script>
+</head>
+<body>
+    <header>
+        Interaktív
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Mikroökonómia</a></li>
+            <li><a href="monopoly.html">Monopólium</a></li>
+            <li><a href="tokeletes.html">Tökéletes verseny</a></li>
+			<li><a href="interaktiv.html" id="active">Interaktív</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Monopólium és tökéletes verseny</h1>
+        <form id="quiz-form">
+            <fieldset>
+                <legend>Válaszolj az alábbi kérdésekre!</legend>
+
+                <!-- Kérdés 1 -->
+                <p>1. Az állam úgy szabályozza a természetes monopóliumok tevékenységét, hogy hosszú távon:</p>
+                <label><input type="radio" name="question1" value="a"> a. gazdasági profitot érjenek el.</label><br>
+                <label><input type="radio" name="question1" value="b"> b. számviteli profitot érjenek el.</label><br>
+                <label><input type="radio" name="question1" value="c" required> c. normálprofitot érjenek el.</label><br>
+
+                <!-- Kérdés 2 -->
+                <p>2. Melyik állítás igaz a monopóliumra?</p>
+                <label><input type="radio" name="question2" value="a" required> a. A vállalat tetszőleges árat alkalmazva maximalizálhatja profitját.</label><br>
+                <label><input type="radio" name="question2" value="b"> b. A vállalat számára a piaci ár külső adottság.</label><br>
+                <label><input type="radio" name="question2" value="c"> c. A vállalat határbevétele különböző mennyiségek mellett eltérő.</label><br>
+
+                <!-- Kérdés 3 -->
+                <p>3. Természetes monopóliumról akkor beszélhetünk, amikor a monopólium:</p>
+                <label><input type="radio" name="question3" value="a" required> a. Természeti erőforrások kizárólagos birtoklásán alapul.</label><br>
+                <label><input type="radio" name="question3" value="b"> b. Létét a piac kis mérete igazolja.</label><br>
+                <label><input type="radio" name="question3" value="c"> c. Tulajdonosa az állam.</label><br>
+
+                <!-- Kérdés 4 -->
+                <p>4. A profitmaximalizálás feltétele, hogy:</p>
+                <label><input type="radio" name="question4" value="a" required> a. A határköltség egyezzen meg a határbevétellel.</label><br>
+                <label><input type="radio" name="question4" value="b"> b. A határhaszon egyezzen meg a határtermékkel.</label><br>
+                <label><input type="radio" name="question4" value="c"> c. Az ár magasabb legyen az átlagköltségnél.</label><br>
+
+                <!-- Kérdés 5 -->
+                <p>5. A monopólium profitja akkor maximális, ha:</p>
+                <label><input type="radio" name="question5" value="a" required> a. Az átlagköltsége minimális.</label><br>
+                <label><input type="radio" name="question5" value="b"> b. Összbevétele maximális.</label><br>
+                <label><input type="radio" name="question5" value="c"> c. Határköltsége és határbevétele egyenlő.</label><br>
+
+                <!-- Kérdés 6 -->
+                <p>6. A monopóliaca a tökéletesen versenyző piacnál:</p>
+                <label><input type="radio" name="question6" value="a" required> a. Kedvezőbb, mert alacsonyabbak a költségek.</label><br>
+                <label><input type="radio" name="question6" value="b"> b. Kedvezőtlenebb, mert jóléti veszteséget okoz a társadalom számára.</label><br>
+                <label><input type="radio" name="question6" value="c"> c. Sem az „a”, sem a „b” nem igaz.</label><br>
+
+                <button type="submit">Küldés</button>
+            </fieldset>
+        </form>
+        <p id="quiz-result"></p>
+        
+    </article>
+    <article>
+        <label>Melyek a természetes monopóliumok jellemzői? (több válasz is lehetséges):</label><br>
+        <input type="checkbox" name="characteristics" value="magas_indulokoltseg"> Magas indulóköltség<br>
+        <input type="checkbox" name="characteristics" value="kis_versenypiac"> Kis versenypiac<br>
+        <input type="checkbox" name="characteristics" value="állami_tulajdon"> Állami tulajdon<br>
+        <input type="checkbox" name="characteristics" value="korlátlan_verseny"> Korlátlan verseny<br>
+    </article>
+    
+    <article>
+        <label for="industry">Melyik iparág lehet természetes monopólium?:</label>
+        <select id="industry" name="industry">
+            <option value="energia">Energiaipar</option>
+            <option value="autógyártás">Autógyártás</option>
+            <option value="távközlés">Távközlés</option>
+            <option value="vendéglátás">Vendéglátás</option>
+        </select>
+    </article>
+    
+    <article>
+        <label for="elasticity">Állítsd be milyen lehet egy monopólium árrugalmassága:</label>
+        <input type="range" id="elasticity" name="elasticity" min="0" max="10" step="0.1" />
+        <span id="elasticity-value">0.5</span> 
+    </article>
+    
+    <article>
+        <label for="profit-calculation">Kérdés: Egy vállalat termelési költsége 100 egység, és a bevétele 150 egység. Mekkora a profitja?</label>
+        <input type="number" id="profit-calculation" name="profit-calculation" min="0" />
+    </article>
+    
+    <article>
+        <label for="file-upload">Megírom a gazdaság beadandód:</label>
+        <input type="file" id="file-upload" name="file-upload" />
+    </article>
+    
+    <article>
+        <label for="monopoly-essay">Írd le szerinted mik a monopólium előnyei és hátrányai:</label>
+        <textarea id="monopoly-essay" name="monopoly-essay" rows="4" cols="50" placeholder="Előnyök, hátrányok..."></textarea>
+    </article>
+    <footer>
+        <p>Az oldal csak tanítási célokat szolgál.</p>
+    </footer>
+    
+</body>
+</html>

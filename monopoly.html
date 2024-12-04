@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hallgató">
+    <meta name="description" content="Mikrookonomia">
+    <title>Mikroökonómia</title>
+    <link href="kepek/favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/monopoly-script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        Monopólium
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Mikroökonómia</a></li>
+            <li><a href="monopoly.html" id="active">Monopólium</a></li>
+            <li><a href="tokeletes.html">Tökéletes verseny</a></li>
+			<li><a href="interaktiv.html">Interaktív</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+		<aside>
+			<h2>Jellemzők</h2>
+			<p>ármeghatározó</p>
+			<p>nehéz belépési korlát</p>
+			<p>birtokolja az összes információt</p>
+			<p>homogén termékek</p>
+		</aside>
+        <article>
+            <h1>A tiszta monopólium</h1>
+            <p>Tiszta monopólium: az a piaci forma, amikor egyetlen eladója van a termékeknek az adott piacon.
+            </p>
+            <ul>
+                <li>a piaci árat és a kínált mennyiséget is képes befolyásolni -> a piaci kereslet (D) függvénye számára az adottság
+                </li>
+                <li>egyszerre határozza meg a saját kínálatának mennyiségét (QS) és a piaci árat (P) a piaci kereslet (QD) figyelembevételével
+                </li>
+                <li>profitja maximalizálására törekszik -> a piaci keresleti függvényhez alkalmazkodnia kell:
+                </li>
+                    <ul>
+                        <li>ha növeli az árat: kevesebbet tud eladni,
+                        </li>
+                        <li>ha növelni akarja az eladott mennyiséget: csökkenteni kell az árat
+                        </li>
+                    </ul>
+            </ul>
+        
+
+        </article>
+        <figure>
+            <img src="kepek/monopoliumACD.jpg" alt="AC görbe és kereslet metszete">
+                <figcaption>Az átlagköltség-görbe, és a piaci keresleti függvény metszi egymást -> a vállalat a teljes keresletet ki tudja elégíteni.
+                </figcaption>
+        </figure>
+    </div>
+    <div id="content">
+        <figure>
+            <img src="kepek/TRfuggveny.jpg" alt="Monopólium Tr görbéje">
+                <figcaption>A monopólium összbevétele (TR) nem nő együtt az eladás növekedésével, (mivel az csökkenő árakkal jár) hanem egyre lassabban nő, s nagy kínálat esetén csökkenhet is.
+                </figcaption>
+        </figure>
+        <figure>
+            <img src="kepek/MRfuggveny.jpg" alt="Monopólium Mr görbéje">
+                <figcaption>Határbevétele (MR) nem fix és nem egyezik meg egyetlen piaci árral, mert egy újabb mennyiséget csak egyre kisebb áron tud eladni -> a monopólium határbevételi görbéje (MR) csökkenő, a rezervációs árból induló, a keresleti görbe (D) alatt húzódó, kétszeres meredekségű egyenes. </figcaption>
+
+        </figure>
+    </div>
+        <article>
+            <h3>A monopólium akkor éri el a legtöbb profitot, ha olyan termelési mennyiséget választ, hogy a határköltsége és határbevétele egyenlő legyen. Képletben:
+            </h3>
+            <ul>
+                <li> profit max, ha (MC = MR)</li>
+                <li>A keresleti (D) fv. elhelyezkedésétől függ, nem előre meghatározható </li>
+                    <ul>
+                        <li>a fedezeti pontja: optimális profitja =0, ha D = AC (érintik egymást).</li>
+                        <li>üzemszüneti pontja: D = AVC </li>
+                        <li>kínálati függvénye: csak a költségek és a D fv. ismeretében határozható meg</li>
+                    </ul>
+            </ul>
+        </article>
+	
+
+    
+    <article>
+        <p>Használja ezt a kalkulátort a monopólium profitjának kiszámításához!</p>
+
+        <div id="calculator">
+            <label for="price">Ár (P):</label>
+            <input type="number" id="price" placeholder="Pl. 100"><br><br>
+
+            <label for="quantity">Eladott mennyiség (Q):</label>
+            <input type="number" id="quantity" placeholder="Pl. 500"><br><br>
+
+            <label for="cost">Határköltség (MC):</label>
+            <input type="number" id="cost" placeholder="Pl. 50"><br><br>
+
+            <button id="calculate">Számolás</button>
+        </div>
+
+        <div id="result">
+            <h2>Eredmény:</h2>
+            <p id="profit">Nincs eredmény</p>
+        </div>
+    </article>
+    <footer>
+        <p>Az oldal csak tanítási célokat szolgál.</p>
+    </footer>
+</body>
+
+</html>
